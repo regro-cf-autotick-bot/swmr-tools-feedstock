@@ -1,5 +1,5 @@
 {% set name = "swmr-tools" %}
-{% set version = "0.3" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swmr_tools-{{ version }}.tar.gz
-  sha256: a092a371477a27e74d30d17c4a5c761d0e8da5d5a7917ddb7f21c05b3680bfda
+  sha256: 983ab18804c880ff4168d9042b87048462dd00adc1a0ccd18cc1d9b5a85c2735
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python tools for working with HDF5 SWMR files'
+  summary: Python tools for working with HDF5 SWMR files
   doc_url: https://python-swmrtools.readthedocs.io
   dev_url: https://github.com/DiamondLightSource/python-swmrtools
 
