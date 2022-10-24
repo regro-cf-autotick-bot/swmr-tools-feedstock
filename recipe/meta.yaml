@@ -1,5 +1,5 @@
 {% set name = "swmr-tools" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swmr_tools-{{ version }}.tar.gz
-  sha256: fe88531d527ea843a03b3067d6ca2f4b5de1609beb393d2850e4781b7dd43f3f
+  sha256: f64afeff62999724dec5f90dd2f75ed8300fc9b8a8aadfa55bfd736791666c40
 
 build:
   noarch: python
