@@ -1,5 +1,5 @@
 {% set name = "swmr-tools" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swmr_tools-{{ version }}.tar.gz
-  sha256: 6933b3cd172404dc2a36d556b2a5fc5f682dbe45325096152df4917301b054e0
+  sha256: c003e0dd54dbde6750d3581725b97757126cc89aef4083c1892d7ad240ec42d5
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   run:
     - numpy
     - h5py
-    - blosc
+    - python-blosc
     - python >=3.6
 
 test:
