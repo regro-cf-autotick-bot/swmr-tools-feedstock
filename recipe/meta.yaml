@@ -6,29 +6,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swmr_tools-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/swmr_tools-{{ version }}.tar.gz
   sha256: c003e0dd54dbde6750d3581725b97757126cc89aef4083c1892d7ad240ec42d5
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
     - numpy
     - h5py
     - python-blosc
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
     - swmr_tools
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
